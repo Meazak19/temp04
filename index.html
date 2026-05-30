@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dessert</title>
+ 
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&amp;family=Puppies+Play&amp;family=Roboto:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Bs 4 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+<!-- Owl-Carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> 
+
+<!-- Animate Css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/2.1.1/animate.min.css"> 
+ 
+
+<style type="text/css">
+
+
+/* 
+
+font-family: "Protest Strike", sans-serif; -->> H
+font-family: "Montserrat", sans-serif; -->> P
+
+*/  
+
+    body .page-wrapper { 
+    font-family:"Montserrat", sans-serif; 
+    color: #6c6a6a; 
+    line-height: 24px; 
+    overflow-x: hidden; 
+    scroll-behavior: smooth; 
+    background-color: #1c1c1c;
+     --primary-red: #c8102e;
+        --deep-red: #8b0a1f;
+        --light-beige: #fff5e6;
+        --soft-pink: #fde2d8;
+        --cream: #fff1dc;
+    } 
+    
+   .page-wrapper p {
+   margin-bottom: 25px; 
+   font-size: 15px; 
+   font-family:"Montserrat", sans-serif;
+   color: #fff;
+   letter-spacing: 2px;
+   line-height: 1.9em;
+   }
+
+   .page-wrapper p > a {
+   color: inherit;
+   }
+   .page-wrapper h1, .page-wrapper h2, .page-wrapper h3, .page-wrapper h4, .page-wrapper h5, .page-wrapper h6 {
+   font-family: "Protest Strike", sans-serif;
+        letter-spacing: 1px;
+        line-height: 1.3;
+   }
+   .page-wrapper .row {
+   margin: 0 -15px!important;
+   }
+   .page-wrapper .bg-dark {
+   background-color: #fc673f!important;
+   }
+
+   .page-wrapper .bg-primary {
+   background-color: #241e5e!important;
+   }
+   .page-wrapper .bg-light {
+   background-color: #f1f1f1!important;
+   }
+   .page-wrapper section {
+   position: relative;
+   z-index: 1;
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+   }   
+   .page-wrapper .btn {
+   font-size: 14px;
+   border-radius: 0;
+   padding: 0 30px;
+   line-height: 50px;
+   }  
+
+   .page-wrapper .overlay{
+      content: "";
+    background: rgb(0 0 0 / 58%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+   }
+
+   .page-wrapper h1 {
+    font-family: "Poetsen One", sans-serif;
+    color: #fff;
+    font-size: 70px; 
+   }
+   .page-wrapper h2 {
+    
+   }
+   .page-wrapper h3 {
+    
+    }
+   .page-wrapper h4 {
+    
+   }
+   .page-wrapper h5 {
+    
+   }
+   .page-wrapper h6 {
+    
+   }
+
+    .heroSection{
+        position:relative;
+        min-height: 640px;
+        background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+                    url('https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780093539phpgdxQCr.jpg') center/cover no-repeat;
+        color:#fff;
+        padding: 120px 0 160px;
+        text-align:center;
+        overflow:hidden;
+    }
+    .heroSection h1{
+        font-size: 88px;
+        line-height:1.05;
+        color:#fff8e1;
+        text-shadow: 4px 4px 0 rgba(0,0,0,0.35);
+        margin-bottom: 30px;
+    }
+    .heroSection p{
+        font-size: 22px;
+        max-width: 900px;
+        margin: 0 auto;
+        color:#fff1dc;
+    }
+     .order-now-ring{
+        position:absolute;
+        bottom:-120px;
+        left:50%;
+        transform:translateX(-50%);
+        width: 220px;
+        height:220px;
+        z-index: 4;
+    }
+     /* Cart circle button */
+    .cart-circle{
+        position:absolute;
+        bottom:-70px;
+        left:50%;
+        transform:translateX(-50%);
+        width: 140px;
+        height:140px;
+        border-radius:50%;
+        background:#fff8e1;
+        border: 6px solid #fff;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        z-index: 5;
+    }
+    .cart-circle i{
+        font-size: 54px;
+        color: var(--primary-red);
+    }
+    .cart-circle .plus{
+        position:absolute;
+        top: 25px;
+        right: 25px;
+        background: var(--primary-red);
+        color:#fff;
+        width: 40px;
+        height:40px;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-weight:700;
+        font-size: 22px;
+    }
+   .aboutSection{
+        position:relative;
+        padding: 180px 0 120px;
+        background: linear-gradient(180deg, #fff1dc 0%, #fde2d8 100%);
+        overflow:hidden;
+    }
+
+    .aboutSection .content-wrap{position:relative; z-index: 2;}
+    .blend-images{position:relative; min-height: 520px;}
+
+     .blend-img-main{
+        position:absolute;
+        width: 78%;
+        border-radius: 40px;
+        overflow:hidden;
+        border: 8px solid #fff;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        top: 0;
+        left: 0;
+    }
+    .blend-img-main img{width:100%; display:block;}
+     .blend-img-secondary{
+        position:absolute;
+        width: 55%;
+        border-radius: 30px;
+        overflow:hidden;
+        border: 8px solid #fff;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        bottom: 0;
+        right: 0;
+    }
+    .blend-img-secondary img{width:100%; display:block;}
+ .blend-text h2{
+        font-size: 60px;
+        color: var(--primary-red);
+        line-height: 1.1;
+        margin-bottom: 35px;
+    }
+    .blend-text p{
+        font-size: 22px;
+        line-height: 1.5;
+        color:#4a2c20;
+        margin-bottom: 35px;
+    }
+
+     .btn-order{
+        background: var(--primary-red);
+        color: #fff8e1;
+        font-family: "Protest Strike", sans-serif;
+        letter-spacing: 1.5px;
+        font-size: 22px;
+        padding: 12px 40px;
+        border-radius: 40px;
+        border:none;
+        box-shadow: 0 8px 20px rgba(200,16,46,0.4);
+        transition: all .3s;
+    }
+    .btn-order:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(200,16,46,0.55);
+        color:#fff;
+    }
+.blend-text {
+  text-align: center;
+}
+ .paymentSection{
+        position:relative;
+        padding: 120px 0 140px;
+        background: linear-gradient(180deg, #fde2d8 0%, #fff1dc 100%);
+        overflow:hidden;
+    }
+    .paymentSection h2{
+        font-size: 100px;
+        color: var(--primary-red);
+        text-align:center;
+        margin-bottom: 20px;
+    }
+    .paymentSection p.lead{
+        text-align:center;
+        font-size: 22px;
+        max-width: 900px;
+        margin: 0 auto 80px;
+        color:#4a2c20;
+    }
+      .steps-row{
+        position:relative;
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+     .connect-line{
+        position:absolute;
+        top: 50%;
+        left: 8%;
+        right: 8%;
+        height: 14px;
+        background: #f4bfb4;
+        border-radius: 10px;
+        transform: translateY(-50%);
+        z-index: 0;
+    }
+    
+   
+    .step{
+        position:relative;
+        text-align:center;
+        z-index: 1;
+    }
+    .step-circle{
+        width: 220px;
+        height: 220px;
+        margin: 0 auto 20px;
+        border-radius:50%;
+        background: var(--primary-red);
+        box-shadow: 0 12px 30px rgba(200,16,46,0.45), inset 0 -6px 0 rgba(0,0,0,0.15);
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        color:#fff;
+        transition: transform .3s;
+    }
+    .step-circle:hover{transform: translateY(-6px) scale(1.03);}
+    .step-circle i{
+        font-size: 80px;
+        margin-bottom: 12px;
+        color:#fff8e1;
+    }
+    .step-circle h4{
+        font-size: 26px;
+        color:#fff8e1;
+        margin:0;
+    }
+    .step-circle.middle{
+        width: 260px;
+        height: 260px;
+    }
+    .step-circle.middle i{font-size: 100px;}
+
+    
+    /* ============ GALLERY ============ */
+    .gallery-section{
+        position:relative;
+        background: var(--primary-red);
+        padding: 100px 0 130px;
+        overflow:hidden;
+    }
+    .gallery-section::before{
+        content:"";
+        position:absolute;
+        top:-80px;
+        left:0;
+        right:0;
+        height: 160px;
+        background: var(--primary-red);
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+    .gallery-section .container{position:relative; z-index:2;}
+    .gallery-section h2{
+        text-align:center;
+        color:#fff8e1;
+        font-size: 100px;
+        margin-bottom: 20px;
+    }
+    .gallery-section p.lead{
+        text-align:center;
+        color:#fff1dc;
+        font-size: 22px;
+        max-width: 1000px;
+        margin: 0 auto 70px;
+    }
+    .gallery-grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .gallery-item{
+        border-radius: 30px;
+        overflow:hidden;
+        position:relative;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+        border: 6px solid #fff8e1;
+    }
+    .gallery-item.big{
+        grid-row: span 2;
+    }
+    .gallery-item img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        display:block;
+        min-height: 260px;
+    }
+    .gallery-item.big img{min-height: 580px;}
+    .gallery-caption{
+        position:absolute;
+        bottom: 0;
+        left:0;
+        right:0;
+        padding: 25px 30px;
+        background: linear-gradient(transparent, rgba(0,0,0,0.75));
+        color:#fff8e1;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    .gallery-caption h3{
+        font-family:"Protest Strike", sans-serif;
+        font-size: 36px;
+        margin:0;
+        color:#fff8e1;
+    }
+    .gallery-caption i{
+        font-size: 28px;
+        color:#fff8e1;
+    }
+    .right-col{
+        display:grid;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 15px;
+    }
+
+    .cloud-gallery-left{
+        position:absolute;
+        left: 20px;
+        top: 80px;
+        width: 150px;
+        z-index:2;
+    }
+    .cloud-gallery-right{
+        position:absolute;
+        right: 20px;
+        bottom: 120px;
+        width: 150px;
+        z-index:2;
+        transform: scaleX(-1);
+    }
+
+     /* ============ ART OF COOKING ============ */
+    .cooking-section{
+        position:relative;
+        padding: 100px 0 80px;
+        background: linear-gradient(180deg, #fff1dc 0%, #fde2d8 100%);
+        overflow:hidden;
+    }
+    .cooking-section h2{
+        font-size: 70px;
+        color: var(--primary-red);
+        text-align:center;
+        margin-bottom: 30px;
+        line-height: 1;
+    }
+    .cooking-section h2 .line1{
+        display:inline-block;
+        background:#fff8e1;
+        color: var(--primary-red);
+        padding: 8px 30px;
+        transform: rotate(-3deg);
+        margin-bottom: 10px;
+        border: 4px solid var(--primary-red);
+    }
+    .cooking-section h2 .line2{
+        display:inline-block;
+        background: var(--primary-red);
+        color: #fff8e1;
+        padding: 8px 30px;
+        transform: rotate(2deg);
+        border: 4px solid #fff8e1;
+        box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+    }
+    .cooking-section p{
+        text-align:center;
+        font-size: 22px;
+        max-width: 900px;
+        margin: 20px auto 30px;
+        color:#4a2c20;
+    }
+    .cooking-tree{
+        display:block;
+        margin: 30px auto 0;
+        max-width: 520px;
+        width: 100%;
+    }
+    .red-cloud-bottom-left{
+        position:absolute;
+        left: 20px;
+        bottom: 30px;
+        width: 180px;
+        z-index: 2;
+    }
+    .red-cloud-bottom-right{
+        position:absolute;
+        right: 40px;
+        bottom: 80px;
+        width: 160px;
+        z-index: 2;
+        transform: scaleX(-1);
+    }
+    .blossom-bottom-left{
+        position:absolute;
+        left:0;
+        top: 100px;
+        width: 260px;
+        z-index:1;
+    }
+    /* RESPONSIVE VIEW */
+
+    @media(min-width:1200px){
+        .page-wrapper .container{
+            max-width: 1140px;
+        }
+    }
+
+    @media(min-width:1500px){
+        .page-wrapper .container{
+            max-width: 1440px;
+        }
+    }
+
+    @media (max-width:1500px)
+    {
+      .heroSection h1{font-size: 78px;}
+        .blend-text h2{font-size: 52px;}
+        .paymentSection h2,.gallery-section h2{font-size: 86px;}
+        .cooking-section h2{font-size: 62px;}
+
+    }
+
+    @media (max-width:1199px)
+    {
+      .heroSection{padding: 100px 0 140px;}
+        .heroSection h1{font-size: 64px;}
+        .heroSection p{font-size: 20px;}
+
+        .aboutSection{padding: 150px 0 100px;}
+ .blend-text h2{font-size: 44px;}
+        .blend-text p{font-size: 19px;}
+
+         .paymentSection h2,.gallery-section h2{font-size: 72px;}
+        .paymentSection p.lead,.gallery-section p.lead,.cooking-section p{font-size: 19px;}
+
+         .step-circle{width: 180px; height:180px;}
+        .step-circle.middle{width: 220px; height:220px;}
+        .step-circle i{font-size: 62px;}
+        .step-circle.middle i{font-size: 82px;}
+        .step-circle h4{font-size: 22px;}
+
+         .cooking-section h2{font-size: 54px;}
+    }
+
+    @media (max-width:991px)
+    {
+      .heroSection{padding: 80px 0 130px; min-height: 520px;}
+        .heroSection h1{font-size: 52px;}
+        .heroSection p{font-size: 18px;}
+
+        .blend-images{min-height: 440px; margin-bottom: 60px;}
+        .aboutSection{padding: 130px 0 80px;}
+
+         .blend-text{text-align:center;}
+        .blend-text h2{font-size: 40px;}
+         .paymentSection{padding: 80px 0 100px;}
+        .paymentSection h2,.gallery-section h2{font-size: 60px;}
+        .steps-row{flex-direction:column; gap: 50px;}
+
+        .connect-line{display:none;}
+         .gallery-section{padding: 80px 0 100px;}
+        .gallery-item.big img{min-height: 400px;}
+        .cooking-section h2{font-size: 48px;}
+
+    }
+
+    @media (max-width:767px)
+    {
+      .heroSection{padding: 70px 0 120px; min-height: 460px;}
+        .heroSection h1{font-size: 44px;}
+        .heroSection p{font-size: 17px;}
+
+         .cart-circle{width: 110px; height:110px; bottom:-55px;}
+        .cart-circle i{font-size: 42px;}
+        .cart-circle .plus{width: 32px; height:32px; font-size:18px; top:18px; right:18px;}
+
+        .aboutSection{padding: 110px 0 70px;}
+        .blend-images{min-height: 380px;}
+         .blend-text h2{font-size: 34px;}
+        .blend-text p{font-size: 17px;}
+        .paymentSection h2,.gallery-section h2{font-size: 48px;}
+        .paymentSection p.lead,.gallery-section p.lead,.cooking-section p{font-size: 17px;}
+
+        .gallery-caption h3{font-size: 28px;}
+        .cooking-section h2{font-size: 40px;}
+    }
+
+    @media (max-width:575px)
+    {
+         .heroSection{padding: 60px 0 110px; min-height: 420px;}
+        .heroSection h1{font-size: 36px;}
+        .heroSection p{font-size: 16px;}
+
+        .aboutSection{padding: 100px 0 60px;}
+        .blend-images{min-height: 320px; margin-bottom: 40px;}
+        .blend-img-main{width: 85%; border-width: 5px; border-radius: 25px;}
+        .blend-img-secondary{width: 62%; border-width: 5px; border-radius: 22px;}
+
+        .blend-text h2{font-size: 28px; margin-bottom: 20px;}
+        .blend-text p{font-size: 16px; margin-bottom: 25px;}
+
+        .btn-order{font-size: 18px; padding: 10px 30px;}
+
+
+        .paymentSection{padding: 60px 0 80px;}
+        .paymentSection h2,.gallery-section h2{font-size: 40px;}
+        .paymentSection p.lead{margin-bottom: 50px;}
+
+         .step-circle{width: 150px; height:150px;}
+        .step-circle.middle{width: 180px; height:180px;}
+        .step-circle i{font-size: 52px;}
+        .step-circle.middle i{font-size: 68px;}
+        .step-circle h4{font-size: 18px;}
+
+         .gallery-section{padding: 60px 0 80px;}
+        .gallery-section h2{margin-bottom: 15px;}
+        .gallery-section p.lead{margin-bottom: 45px;}
+        .gallery-grid{grid-template-columns: 1fr; grid-gap: 15px;}
+        .gallery-item.big{grid-row: auto;}
+        .gallery-item img, .gallery-item.big img{min-height: 240px;}
+        .gallery-caption h3{font-size: 24px;}
+        .gallery-caption{padding: 18px 22px;}
+        .cooking-section{padding: 70px 0 60px;}
+        .cooking-section h2{font-size: 32px;}
+        .cooking-section h2 .line1,
+        .cooking-section h2 .line2{padding: 6px 20px;}
+        .cooking-section p{font-size: 16px;}
+        .pink-circle.pc3, .pink-circle.pc5{display:none;}
+        .blossom-right, .blossom-left, .blossom-bottom-left{width: 180px;}
+    }
+    
+</style>
+
+
+</head>
+
+
+<body>
+
+    
+
+<div id="page-top-margin"></div>
+
+<div class="page-wrapper">
+
+<section class="heroSection">
+ 
+
+    <div class="container">
+        <h1>The Perfect Blend of<br>Tradition &amp; Innovation!</h1>
+        <p>Take your taste buds on a journey with {TAKEAWAY NAME} in {TAKEAWAY TOWN}. Our takeaway menu is packed with fresh and flavourful options, perfect for any time of the day.</p>
+    </div>
+
+    <div class="order-now-ring">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <path id="circlePath" d="M 110,110 m -95,0 a 95,95 0 1,1 190,0 a 95,95 0 1,1 -190,0"/>
+            </defs>
+            <text fill="#fff8e1" font-family="'Protest Strike', sans-serif" font-size="20" letter-spacing="4">
+                <textPath href="#circlePath">ORDER NOW &nbsp;•&nbsp; ORDER NOW &nbsp;•&nbsp; ORDER NOW &nbsp;•&nbsp;</textPath>
+            </text>
+        </svg>
+    </div>
+    <div class="cart-circle">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="plus">+</span>
+    </div>
+</section>
+
+<!-- ============ BLEND SECTION ============ -->
+<section class="aboutSection">
+    <!-- <div class="pink-circle pc1"></div>
+    <div class="pink-circle pc2"></div>
+    <div class="pink-circle pc3"></div>
+    <div class="pink-circle pc4"></div>
+    <div class="pink-circle pc5"></div> -->
+
+
+    <div class="container content-wrap">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="blend-images">
+                    <div class="blend-img-main">
+                        <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094025php6aikIc.jpg" alt="Ramen">
+                    </div>
+                    <div class="blend-img-secondary">
+                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094026phpiwdnz8.jpg" alt="Sushi">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="blend-text">
+                    <h2>The Perfect Blend of<br>Tradition &amp; Innovation!</h2>
+                    <p>Skip the wait and take home the best of Japanese cuisine with {TAKEAWAY NAME}. Our takeaway options in {TAKEAWAY TOWN} bring authentic flavours to your doorstep, making every meal a delight.</p>
+                    <button class="btn-order">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="paymentSection">
+    <div class="container">
+        <h2>How it Works</h2>
+        <p class="lead">Life's too short to wait for food! {TAKEAWAY NAME}, {TAKEAWAY TOWN} makes ordering quick and hassle-free, ensuring you get fresh, delicious meals without the wait.</p>
+
+        <div class="steps-row">
+            <div class="connect-line"></div>
+
+            <div class="step">
+                <div class="step-circle">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h4>Find Your Feast</h4>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-circle middle">
+                    <i class="fas fa-credit-card"></i>
+                    <h4>Secure Payment</h4>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-circle">
+                    <i class="fas fa-utensils"></i>
+                    <h4>Tuck In &amp; Savour</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery-section">
+    <div class="container">
+        <h2>Our Gallery</h2>
+        <p class="lead">Great food, no hassle! {TAKEAWAY NAME} in {TAKEAWAY TOWN} makes it easy to enjoy authentic Japanese cuisine at home. Order today and experience a burst of flavour in every bite.</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item big">
+                <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094025phpTqsZar.jpg" alt="Katsu Chicken">
+                <div class="gallery-caption">
+                    <h3>Katsu Chicken</h3>
+                    <i class="fas fa-share"></i>
+                </div>
+            </div>
+            <div class="right-col">
+                <div class="row no-gutters" style="gap:15px; display:flex; flex-wrap:nowrap;">
+                    <div class="gallery-item" style="flex:1;">
+                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094025phpasNIDF.jpg" alt="Sashimi">
+                    </div>
+                    <div class="gallery-item" style="flex:1;">
+                        <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094026phpNdMv6T.jpg" alt="Tempura">
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094026phpb7Lk2m.jpg" alt="Sushi Rolls">
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+</section>
+
+<!-- ============ ART OF COOKING ============ -->
+<section class="cooking-section">
+ 
+
+    <div class="container">
+        <h2>
+            <span class="line1">Art Of</span><br>
+            <span class="line2">Japanese Cooking</span>
+        </h2>
+        <p>Our takeaway menu offers everything from classic {dish name 1} to flavourful {dish name 2}, prepared fresh and packed for your convenience.</p>
+        <div class="text-center">
+            <button class="btn-order">Order Now</button>
+        </div>
+
+        <img class="cooking-tree" src="https://images.unsplash.com/photo-1522383225653-ed111181a951?w=900&q=80" alt="Sakura Tree">
+    </div>
+
+   
+</section>
+
+
+</div>
+
+
+<script>
+   window.addEventListener("load", function(){
+   pageTopmargin();
+   $(window).scrollTop($(window).scrollTop()+1);
+   });
+   pageTopmargin();
+   function pageTopmargin() {
+   var headerHeight = $('#header').height();
+   $('#page-top-margin').css({ marginTop : headerHeight + 'px' });
+   }
+   $("#banner_content").appendTo($("#offer-section"));
+   var pageSection = $('[data-background]');
+   pageSection.each(function(indx){
+   if ($(this).attr("data-background")){
+   $(this).css("background-image", "url(" + $(this).data("background") + ")");
+   }
+   });
+</script>
+
+ <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.js" type="text/javascript"></script>
+ <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" type="text/javascript"></script>
+  
+
+<script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" type="text/javascript"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+
+
+ <script> 
+
+  var $owl = $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: false,
+    autoplay: false,
+    center: true,
+    autoplayTimeout: 4000,
+    smartSpeed: 2000,
+    responsive: {
+      0:   { items: 1 },
+      576: { items: 2, center: false },
+      768: { items: 3 },
+      992: { items: 3 }
+    }
+  });
+
+  function setActiveCard() {
+    $('.owl-carousel .owl-item .slider-wrapper').removeClass('active');
+    var $visibleItems = $('.owl-carousel .owl-item.active');
+    $visibleItems.eq(0).find('.slider-wrapper').addClass('active');
+  }
+
+  $owl.on('initialized.owl.carousel translated.owl.carousel', function () {
+    setActiveCard();
+  });
+
+  setActiveCard();
+
+  // On hover: remove active from 2nd card
+  // On mouse leave: restore active to 2nd card
+  $(document).on('mouseenter', '.owl-item .slider-wrapper', function () {
+    $('.owl-carousel .owl-item .slider-wrapper').removeClass('active');
+  });
+
+  $(document).on('mouseleave', '.owl-item .slider-wrapper', function () {
+    setActiveCard();
+  });
+ 
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> -->
+
+<script> 
+ 
+
+     $('.js-tilt').tilt({
+         maxTilt: 5, 
+         maxGlare: .2,
+perspective: 1000 , // lower = more dramatic 3D effect 
+speed: 400,         // transition speed (higher = smoother/slower)
+easing: "cubic-bezier(.03,.98,.52,.99)", // animation curve     
+    speed: 800,
+    glare: false, 
+ 
+         
+     }); 
+</script>
+
+<script src="./script.js">
+
+ 
+
+
+</script>
+ 
+ 
+
+
+</body>
+</html> 
+ 
+
