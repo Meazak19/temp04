@@ -37,9 +37,9 @@ font-family: "Montserrat", sans-serif; -->> P
     font-family:"Montserrat", sans-serif; 
     color: #6c6a6a; 
     line-height: 24px; 
-    overflow-x: hidden; 
+    overflow: hidden; 
     scroll-behavior: smooth; 
-    background-color: #1c1c1c;
+        background-color: #ffefdb;
      --primary-red: #c8102e;
         --deep-red: #8b0a1f;
         --light-beige: #fff5e6;
@@ -131,7 +131,12 @@ font-family: "Montserrat", sans-serif; -->> P
         color:#fff;
         padding: 120px 0 160px;
         text-align:center;
-        overflow:hidden;
+        overflow:hidden; 
+                clip-path: ellipse(70% 70% at 50% 28%);
+    padding: 100px 0 200px;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
     }
     .heroSection h1{
         font-size: 88px;
@@ -141,14 +146,14 @@ font-family: "Montserrat", sans-serif; -->> P
         margin-bottom: 30px;
     }
     .heroSection p{
-        font-size: 22px;
-        max-width: 900px;
-        margin: 0 auto;
-        color:#fff1dc;
+            font-size: 26px;
+    max-width: 65%;
+    margin: 0 auto;
+    color: #fff1dc;
     }
      .order-now-ring{
         position:absolute;
-        bottom:-120px;
+        top:-230px;
         left:50%;
         transform:translateX(-50%);
         width: 220px;
@@ -158,7 +163,7 @@ font-family: "Montserrat", sans-serif; -->> P
      /* Cart circle button */
     .cart-circle{
         position:absolute;
-        bottom:-70px;
+        top:-190px;
         left:50%;
         transform:translateX(-50%);
         width: 140px;
@@ -193,47 +198,57 @@ font-family: "Montserrat", sans-serif; -->> P
     }
    .aboutSection{
         position:relative;
-        padding: 180px 0 120px;
-        background: linear-gradient(180deg, #fff1dc 0%, #fde2d8 100%);
-        overflow:hidden;
+        padding: 100px 0 120px;
+        background: linear-gradient(180deg, #fff1dc 0%, #fde2d8 100%); 
     }
 
     .aboutSection .content-wrap{position:relative; z-index: 2;}
-    .blend-images{position:relative; min-height: 520px;}
+    .blend-images{    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;}
 
-     .blend-img-main{
-        position:absolute;
-        width: 78%;
-        border-radius: 40px;
-        overflow:hidden;
-        border: 8px solid #fff;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        top: 0;
-        left: 0;
+     .blend-img-main{ 
+    width: 67%;
+    height: 580px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     }
-    .blend-img-main img{width:100%; display:block;}
-     .blend-img-secondary{
-        position:absolute;
-        width: 55%;
-        border-radius: 30px;
-        overflow:hidden;
-        border: 8px solid #fff;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-        bottom: 0;
-        right: 0;
+    .blend-img-main img{    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 100%;}
+     .blend-img-secondary{ 
+    width: 225px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #fff;
+    position: relative;
+    transform: scale(1.5) translate(-20px, -30px);
+    transform-origin: top right;
+    height: 220px;
+    box-shadow: -7px 7px 7px rgba(0, 0, 0, 0.2);
     }
-    .blend-img-secondary img{width:100%; display:block;}
+    .blend-img-secondary img{    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;}
  .blend-text h2{
-        font-size: 60px;
-        color: var(--primary-red);
-        line-height: 1.1;
-        margin-bottom: 35px;
+    font-size: 48px;
+    color: var(--primary-red);
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 35px;
     }
     .blend-text p{
-        font-size: 22px;
-        line-height: 1.5;
-        color:#4a2c20;
-        margin-bottom: 35px;
+    font-size: 28px;
+    line-height: 1.3;
+    color: #4a2c20;
+    max-width: 75%;
+    margin: auto;
+    margin-bottom: 30px;
     }
 
      .btn-order{
@@ -254,7 +269,7 @@ font-family: "Montserrat", sans-serif; -->> P
         color:#fff;
     }
 .blend-text {
-  text-align: center;
+  text-align: center; 
 }
  .paymentSection{
         position:relative;
@@ -267,13 +282,15 @@ font-family: "Montserrat", sans-serif; -->> P
         color: var(--primary-red);
         text-align:center;
         margin-bottom: 20px;
+        font-weight: 800;
     }
     .paymentSection p.lead{
-        text-align:center;
-        font-size: 22px;
-        max-width: 900px;
-        margin: 0 auto 80px;
-        color:#4a2c20;
+    text-align: center;
+    font-size: 25px;
+    max-width: 900px;
+    margin: 0 auto 80px;
+    color: #000000;
+    font-weight: 400;
     }
       .steps-row{
         position:relative;
@@ -301,6 +318,9 @@ font-family: "Montserrat", sans-serif; -->> P
         text-align:center;
         z-index: 1;
     }
+    .step.two {
+            transform: scale(1.3);
+    }
     .step-circle{
         width: 220px;
         height: 220px;
@@ -322,9 +342,10 @@ font-family: "Montserrat", sans-serif; -->> P
         color:#fff8e1;
     }
     .step-circle h4{
-        font-size: 26px;
-        color:#fff8e1;
-        margin:0;
+            font-size: 26px;
+    color: #fff8e1;
+    margin: 0;
+    font-weight: 600;
     }
     .step-circle.middle{
         width: 260px;
@@ -334,11 +355,17 @@ font-family: "Montserrat", sans-serif; -->> P
 
     
     /* ============ GALLERY ============ */
+    .rightGrid {
+            display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    }
     .gallery-section{
         position:relative;
         background: var(--primary-red);
-        padding: 100px 0 130px;
+        padding: 100px 0 150px;
         overflow:hidden;
+            clip-path: ellipse(72% 64% at 50% 64%);
     }
     .gallery-section::before{
         content:"";
@@ -352,31 +379,38 @@ font-family: "Montserrat", sans-serif; -->> P
     }
     .gallery-section .container{position:relative; z-index:2;}
     .gallery-section h2{
-        text-align:center;
-        color:#fff8e1;
-        font-size: 100px;
-        margin-bottom: 20px;
+            text-align: center;
+    color: #fff8e1;
+    font-size: 100px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    transform: scaleY(1.3);
+    }
+    .artContent {
+            margin-top: -50px;
     }
     .gallery-section p.lead{
-        text-align:center;
-        color:#fff1dc;
-        font-size: 22px;
-        max-width: 1000px;
-        margin: 0 auto 70px;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff1dc;
+    font-size: 26px;
+    max-width: 1000px;
+    margin: 0 auto 70px;
+    font-weight: 400;
     }
     .gallery-grid{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 15px;
-        max-width: 1100px;
-        margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.6fr 2fr;
+    column-gap: 15px;
+    max-width: 90%;
+    margin: 0 auto;
     }
     .gallery-item{
         border-radius: 30px;
         overflow:hidden;
         position:relative;
         box-shadow: 0 15px 40px rgba(0,0,0,0.35);
-        border: 6px solid #fff8e1;
+        border: 3px solid #fff8e1;
     }
     .gallery-item.big{
         grid-row: span 2;
@@ -389,6 +423,13 @@ font-family: "Montserrat", sans-serif; -->> P
         min-height: 260px;
     }
     .gallery-item.big img{min-height: 580px;}
+    .gallery-item.two {
+        border-radius: 0 50px 0 0;
+    }
+    .gallery-item.three {
+        border-radius: 0 0 50px 0;
+
+    }
     .gallery-caption{
         position:absolute;
         bottom: 0;
@@ -432,13 +473,25 @@ font-family: "Montserrat", sans-serif; -->> P
         z-index:2;
         transform: scaleX(-1);
     }
-
+.clodImgOne {
+        position: absolute;
+    top: 150px;
+    left: 0;
+    width: 200px;
+    transform: scale(2.0);
+}
+.clodImgTwo { 
+    position: absolute;
+    bottom: 290px;
+    right: 0;
+    width: 200px;
+    transform: scale(2.0);
+}
      /* ============ ART OF COOKING ============ */
     .cooking-section{
         position:relative;
-        padding: 100px 0 80px;
-        background: linear-gradient(180deg, #fff1dc 0%, #fde2d8 100%);
-        overflow:hidden;
+        padding: 0px 0 80px;
+        background: linear-gradient(180deg, #fff1dc 0%, #fde2d8 100%); 
     }
     .cooking-section h2{
         font-size: 70px;
@@ -499,6 +552,16 @@ font-family: "Montserrat", sans-serif; -->> P
         top: 100px;
         width: 260px;
         z-index:1;
+    }
+    .treeImg {
+            position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    object-fit: contain;
+    object-position: top;
+    max-width: 650px;
+    transform: scale(1.5) rotate(-15deg) translate(60px, 20px);
     }
     /* RESPONSIVE VIEW */
 
@@ -648,13 +711,30 @@ font-family: "Montserrat", sans-serif; -->> P
 
 <section class="heroSection">
  
+    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094025phpF7PIfY.png" class="img-fluid clodImgOne" alt="">
+    <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094025phpF7PIfY.png" class="img-fluid clodImgTwo" alt=""> 
 
     <div class="container">
         <h1>The Perfect Blend of<br>Tradition &amp; Innovation!</h1>
         <p>Take your taste buds on a journey with {TAKEAWAY NAME} in {TAKEAWAY TOWN}. Our takeaway menu is packed with fresh and flavourful options, perfect for any time of the day.</p>
     </div>
 
-    <div class="order-now-ring">
+
+</section>
+
+<!-- ============ BLEND SECTION ============ -->
+<section class="aboutSection">
+    <!-- <div class="pink-circle pc1"></div>
+    <div class="pink-circle pc2"></div>
+    <div class="pink-circle pc3"></div>
+    <div class="pink-circle pc4"></div>
+    <div class="pink-circle pc5"></div> -->
+
+    
+
+    <div class="container content-wrap">
+
+            <div class="order-now-ring">
         <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <path id="circlePath" d="M 110,110 m -95,0 a 95,95 0 1,1 190,0 a 95,95 0 1,1 -190,0"/>
@@ -668,18 +748,7 @@ font-family: "Montserrat", sans-serif; -->> P
         <i class="fas fa-shopping-cart"></i>
         <span class="plus">+</span>
     </div>
-</section>
 
-<!-- ============ BLEND SECTION ============ -->
-<section class="aboutSection">
-    <!-- <div class="pink-circle pc1"></div>
-    <div class="pink-circle pc2"></div>
-    <div class="pink-circle pc3"></div>
-    <div class="pink-circle pc4"></div>
-    <div class="pink-circle pc5"></div> -->
-
-
-    <div class="container content-wrap">
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-12">
                 <div class="blend-images">
@@ -716,21 +785,21 @@ font-family: "Montserrat", sans-serif; -->> P
             <div class="step">
                 <div class="step-circle">
                     <i class="fas fa-clipboard-list"></i>
-                    <h4>Find Your Feast</h4>
+                    <h4>Find Your <br> Feast</h4>
                 </div>
             </div>
 
-            <div class="step">
+            <div class="step two">
                 <div class="step-circle middle">
                     <i class="fas fa-credit-card"></i>
-                    <h4>Secure Payment</h4>
+                    <h4>Secure <br> Payment</h4>
                 </div>
             </div>
 
             <div class="step">
                 <div class="step-circle">
                     <i class="fas fa-utensils"></i>
-                    <h4>Tuck In &amp; Savour</h4>
+                    <h4>Tuck In &amp; <br> Savour</h4>
                 </div>
             </div>
         </div>
@@ -752,15 +821,15 @@ font-family: "Montserrat", sans-serif; -->> P
                 </div>
             </div>
             <div class="right-col">
-                <div class="row no-gutters" style="gap:15px; display:flex; flex-wrap:nowrap;">
+                <div class="rightGrid">
                     <div class="gallery-item" style="flex:1;">
                         <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094025phpasNIDF.jpg" alt="Sashimi">
                     </div>
-                    <div class="gallery-item" style="flex:1;">
+                    <div class="gallery-item two" style="flex:1;">
                         <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094026phpNdMv6T.jpg" alt="Tempura">
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item three">
                     <img src="https://public.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094026phpb7Lk2m.jpg" alt="Sushi Rolls">
                 </div>
             </div>
@@ -774,16 +843,25 @@ font-family: "Montserrat", sans-serif; -->> P
  
 
     <div class="container">
-        <h2>
-            <span class="line1">Art Of</span><br>
-            <span class="line2">Japanese Cooking</span>
-        </h2>
-        <p>Our takeaway menu offers everything from classic {dish name 1} to flavourful {dish name 2}, prepared fresh and packed for your convenience.</p>
-        <div class="text-center">
-            <button class="btn-order">Order Now</button>
-        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="artContent">
+                    <h2>
+                               <span class="line1">Art Of</span><br>
+                               <span class="line2">Japanese Cooking</span>
+                           </h2>
+                           <p>Our takeaway menu offers everything from classic {dish name 1} to flavourful {dish name 2}, prepared fresh and packed for your convenience.</p>
+                           <div class="text-center">
+                               <button class="btn-order">Order Now</button>
+                           </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+            </div>
+                <img src="https://assets.touch2success.com/static/b1cb275a788a9c10f60a93682b1e7039/img/1780094005phpKdmNdk.png" class="img-fluid treeImg" alt="">
 
-        <img class="cooking-tree" src="https://images.unsplash.com/photo-1522383225653-ed111181a951?w=900&q=80" alt="Sakura Tree">
+        </div>
+        
     </div>
 
    
